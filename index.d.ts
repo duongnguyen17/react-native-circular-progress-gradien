@@ -53,6 +53,11 @@ declare module 'react-native-circular-progress' {
      *
      */
     onAnimationComplete?: (event: { finished: boolean }) => void;
+
+    /**
+     * range for gradient color
+     */
+    inputRange?: Array<number>
   }
 
   export class AnimatedCircularProgress extends React.Component<
@@ -120,12 +125,9 @@ declare module 'react-native-circular-progress' {
     backgroundWidth?: number;
 
     /**
-     * Color of the progress line
-     *
-     * @type {string}
-     * @default 'black'
+     * Array Colors of the progress line
      */
-    tintColor?: string;
+    tintColor: Array<string>;
 
 
     /**
@@ -222,6 +224,7 @@ declare module 'react-native-circular-progress' {
      * @default '{ width: 0, gap: 0 }'
      */
     dashedBackground?: { width: number; gap: number };
+
   }
 
   export class CircularProgress extends React.Component<CircularProgressProps> {

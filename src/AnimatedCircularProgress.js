@@ -89,7 +89,7 @@ AnimatedCircularProgress.propTypes = {
   onAnimationComplete: PropTypes.func,
   useNativeDriver: PropTypes.bool,
   delay: PropTypes.number,
-  inputRange: PropTypes.array,
+  inputRange: PropTypes.arrayOf(PropTypes.number),
 };
 
 AnimatedCircularProgress.defaultProps = {
@@ -98,5 +98,4 @@ AnimatedCircularProgress.defaultProps = {
   prefill: 0,
   useNativeDriver: false,
   delay: 0,
-  inputRange: [0, 100],
 };
